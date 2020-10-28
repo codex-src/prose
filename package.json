@@ -2,8 +2,9 @@
 	"name": "codex-prose",
 	"license": "MIT",
 	"scripts": {
-		"build-readable": "node-sass src/index.scss --indent-type tab --indent-width 1 > build/index.css",
-		"build-minified": "node-sass src/index.scss --output-style compressed > build/index.min.css",
+		"build-readable": "node-sass --indent-type tab --indent-width 1 src/index.scss > build/index.css",
+		"build-minified": "node-sass --output-style compressed src/index.scss > build/index.min.css",
+		"clean-readable": "prettier -w build/index.css",
 		"build": "yarn build-readable && yarn build-minified"
 	},
 	"devDependencies": {
