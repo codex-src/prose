@@ -1,6 +1,6 @@
 {
-	"name": "codex-prose",
-	"version": "0.1.1",
+	"name": "@zaydek/prose",
+	"version": "0.1.3",
 	"main": "build/index.css",
 	"license": "MIT",
 	"scripts": {
