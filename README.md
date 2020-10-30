@@ -1,8 +1,6 @@
-# Prose
+# @zaydek/prose
 
-Prose adds opinionated styling for prose.
-
-## Get Started
+`@zaydek/prose` is a stylesheet for prose. Contributions are welcome as issues and or pull requests.
 
 To get started, simply run this command:
 
@@ -11,15 +9,19 @@ yarn add @zaydek/prose
 # or npm i @zaydek/prose
 ```
 
-Prose is a CSS dependency. Once you import `@zaydek/prose`, simply add the `prose` class to an element, preferably an `<article>`.
+Then add `class="prose"` to get started!
 
-```jsx
+**Usage:**
+
+```tsx
 import "@zaydek/prose"
 
-export default function Prose() {
+function Component() {
 	return (
-		<article class="prose">
-			<h1>Hello, world!</h1>
+		<article className="prose">
+			<h1 id="hello-world">
+				<a href="#hello-world">Hello, world!</a>
+			</h1>
 			<p>
 				Thanks for trying <code>prose</code>!
 			</p>
@@ -27,6 +29,8 @@ export default function Prose() {
 	)
 }
 ```
+
+**Note:** `@zaydek/prose` does not bundle a CSS reset.
 
 ## License
 
