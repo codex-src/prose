@@ -11,21 +11,38 @@ yarn add @zaydek/prose
 
 **Usage:**
 
+<!-- prettier-ignore -->
 ```tsx
 import "@zaydek/prose"
 
 function Component() {
 	return (
 		<article className="prose">
-			<h1 id="hello-world">
-				<a href="#hello-world">Hello, world!</a>
-			</h1>
-			<p>
-				Thanks for trying <code>prose</code>!
-			</p>
+			<h1 id="hello-world"><a href="#hello-world">Hello, world!</a></h1>
+			<p>Thanks for trying <code>prose</code>!</p>
 		</article>
 	)
 }
+```
+
+**Usage: (CDN)**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hello, world!</title>
+		<link rel="stylesheet" href="https://unpkg.com/@zaydek/prose/dist/index.min.css" />
+	</head>
+	<body>
+		<article class="prose">
+			<h1 id="hello-world"><a href="#hello-world">Hello, world!</a></h1>
+			<p>Thanks for trying <code>prose</code>!</p>
+		</article>
+	</body>
+</html>
 ```
 
 ## Supported HTML
@@ -43,7 +60,7 @@ function Component() {
 - [x] `<a>`
 - [x] `<small>`
 
-**Note:** `@zaydek/prose` does not bundle a CSS reset. Personally, I recommend [normalize.css](https://github.com/necolas/normalize.css) or [modern-normalize.css](https://github.com/sindresorhus/modern-normalize).
+**Note:** `@zaydek/prose` does not bundle a CSS reset. I recommend [normalize.css](https://github.com/necolas/normalize.css) or [modern-normalize.css](https://github.com/sindresorhus/modern-normalize).
 
 ## License
 
