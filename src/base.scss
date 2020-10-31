@@ -3,7 +3,7 @@
 		margin-top: rem($font-size);
 		@media (min-width: $sm) {
 			& {
-				margin-top: rem($small-font-size);
+				margin-top: rem($sm-font-size);
 			}
 		}
 	}
@@ -16,7 +16,7 @@
 		color: var(--gray-800);
 		@media (min-width: $sm) {
 			& {
-				font: 400 rem($small-font-size) / 1.6 $sans;
+				font: 400 rem($sm-font-size) / 1.6 $sans;
 			}
 		}
 	}

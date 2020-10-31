@@ -12,10 +12,10 @@ $h3-font-size: 18;
 $font-size: 16;
 $font-size-small-em: em(13);
 
-$small-h1-font-size: 28;
-$small-h2-font-size: 24;
-$small-h3-font-size: 20;
-$small-font-size: 18;
+$sm-h1-font-size: 28;
+$sm-h2-font-size: 24;
+$sm-h3-font-size: 20;
+$sm-font-size: 18;
 
 .prose {
 	@include base;
