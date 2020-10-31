@@ -3,7 +3,7 @@
 		@include no-macos-retina;
 
 		padding: em(2) em(4);
-		font-size: $fs-small-em;
+		font-size: $font-size-small-em;
 		color: var(--blue-600);
 		background-color: var(--white);
 		border: 1px solid var(--gray-300);
@@ -16,7 +16,7 @@
 		margin: rem(24) rem(-24);
 		padding: rem(12) rem(24);
 		background-color: var(--gray-800);
-		font: 400 $fs-small-em / 1.6 $mono;
+		font: 400 $font-size-small-em / 1.6 $mono;
 		color: var(--white);
 		border-radius: 0;
 		@media (min-width: $sm) {

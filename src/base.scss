@@ -1,9 +1,9 @@
 @mixin base {
 	* + * {
-		margin-top: rem($fs);
+		margin-top: rem($font-size);
 		@media (min-width: $sm) {
 			& {
-				margin-top: rem($sm-fs);
+				margin-top: rem($small-font-size);
 			}
 		}
 	}
@@ -12,11 +12,11 @@
 	}
 
 	& {
-		font: 400 rem($fs) / 1.6 $sans;
+		font: 400 rem($font-size) / 1.6 $sans;
 		color: var(--gray-800);
 		@media (min-width: $sm) {
 			& {
-				font: 400 rem($sm-fs) / 1.6 $sans;
+				font: 400 rem($small-font-size) / 1.6 $sans;
 			}
 		}
 	}
@@ -32,6 +32,6 @@
 		color: var(--gray-600);
 	}
 	small {
-		font-size: $fs-small-em;
+		font-size: $font-size-small-em;
 	}
 }

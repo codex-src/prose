@@ -6,16 +6,16 @@
 @import "./functions";
 @import "./variables";
 
-$h1-fs: 24;
-$h2-fs: 20;
-$h3-fs: 18;
-$fs: 16;
-$fs-small-em: em(13);
+$h1-font-size: 24;
+$h2-font-size: 20;
+$h3-font-size: 18;
+$font-size: 16;
+$font-size-small-em: em(13);
 
-$sm-h1-fs: 28;
-$sm-h2-fs: 24;
-$sm-h3-fs: 20;
-$sm-fs: 18;
+$small-h1-font-size: 28;
+$small-h2-font-size: 24;
+$small-h3-font-size: 20;
+$small-font-size: 18;
 
 .prose {
 	@include base;
