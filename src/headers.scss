@@ -4,7 +4,7 @@
 		font: 600 rem($h1-font-size) / 1.4 $sans;
 		color: var(--black);
 		@media (min-width: $sm) {
-			margin-top: rem($sm-font-size);
+			margin-top: rem(2 * $sm-font-size);
 			font: 600 rem($sm-h1-font-size) / 1.4 $sans;
 		}
 		& + * {
@@ -19,7 +19,7 @@
 		font: 600 rem($h2-font-size) / 1.4 $sans;
 		color: var(--black);
 		@media (min-width: $sm) {
-			margin-top: rem($sm-font-size);
+			margin-top: rem(2 * $sm-font-size);
 			font: 600 rem($sm-h2-font-size) / 1.4 $sans;
 		}
 		& + * {
@@ -38,7 +38,7 @@
 		font: 600 rem($h3-font-size) / 1.4 $sans;
 		color: var(--black);
 		@media (min-width: $sm) {
-			margin-top: rem($sm-font-size);
+			margin-top: rem(2 * $sm-font-size);
 			font: 600 rem($sm-h3-font-size) / 1.4 $sans;
 		}
 		& + * {
