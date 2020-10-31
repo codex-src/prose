@@ -1,6 +1,6 @@
 @mixin headers {
 	h1 {
-		margin-top: rem($font-size);
+		margin-top: rem(2 * $font-size);
 		font: 600 rem($h1-font-size) / 1.4 $sans;
 		color: var(--black);
 		@media (min-width: $sm) {
@@ -15,7 +15,7 @@
 		}
 	}
 	h2 {
-		margin-top: rem($font-size);
+		margin-top: rem(2 * $font-size);
 		font: 600 rem($h2-font-size) / 1.4 $sans;
 		color: var(--black);
 		@media (min-width: $sm) {
@@ -34,7 +34,7 @@
 	h4,
 	h5,
 	h6 {
-		margin-top: rem($font-size);
+		margin-top: rem(2 * $font-size);
 		font: 600 rem($h3-font-size) / 1.4 $sans;
 		color: var(--black);
 		@media (min-width: $sm) {
