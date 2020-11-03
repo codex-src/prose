@@ -18,6 +18,8 @@ $fs-small-em: em(13);
 
 .prose {
 	@include base;
+
+	/*! @zaydek/prose | MIT License | https://github.com/zaydek/prose */
 	@include code;
 	@include headers;
 	@include lists;
