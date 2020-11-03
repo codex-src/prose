@@ -3,19 +3,18 @@
 @import "./headers";
 @import "./lists";
 
-@import "./functions";
+@import "./utils";
 @import "./variables";
 
-$h1-font-size: 24;
-$h2-font-size: 20;
-$h3-font-size: 18;
-$font-size: 16;
-$font-size-small-em: em(13);
+$base-fs: 18;
+$base-lh: 1.6;
 
-$sm-h1-font-size: 28;
-$sm-h2-font-size: 24;
-$sm-h3-font-size: 20;
-$sm-font-size: 18;
+$head-h1-fs: 28;
+$head-h2-fs: 24;
+$head-h3-fs: 20;
+$head-lh: 1.4;
+
+$fs-small-em: em(13);
 
 .prose {
 	@include base;

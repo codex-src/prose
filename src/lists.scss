@@ -5,10 +5,8 @@
 		margin-left: rem($inset);
 	}
 	ul li {
-		margin: rem(4) 0;
-		@media (min-width: $sm) {
-			margin: rem(6) 0;
-		}
+		margin-top: rem(6);
+		margin-bottom: rem(6);
 	}
 	ul li::before {
 		margin-left: rem(-1 * $inset);
@@ -21,10 +19,8 @@
 		margin-left: rem($inset);
 	}
 	ol li {
-		margin: rem(4) 0;
-		@media (min-width: $sm) {
-			margin: rem(6) 0;
-		}
+		margin-top: rem(6);
+		margin-bottom: rem(6);
 	}
 	ol li:first-of-type {
 		counter-reset: count;
@@ -33,10 +29,8 @@
 		margin-left: rem(-1 * $inset);
 		position: absolute;
 		content: counter(count) ". ";
+		counter-increment: count; // Etc.
+		font-feature-settings: "tnum"; // Etc.
 		color: var(--blue-500);
-
-		// Etc.
-		counter-increment: count;
-		font-feature-settings: "tnum";
 	}
 }
