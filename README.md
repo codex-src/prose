@@ -1,6 +1,6 @@
 # @zaydek/prose
 
-`@zaydek/prose` is a stylesheet for prose. Contributions are welcome as issues and or pull requests.
+Prose is a stylesheet for prose. Contributions are welcome as issues and or pull requests.
 
 To get started, simply run this command:
 
@@ -47,7 +47,7 @@ function Component() {
 
 ## Supported HTML
 
-`@zaydek/prose` currently supports:
+Prose currently supports:
 
 - [x] `<h1-h6>`
 - [x] `<p>`
@@ -60,7 +60,7 @@ function Component() {
 - [x] `<a>`
 - [x] `<small>`
 
-**Note:** `@zaydek/prose` does not bundle a CSS reset. I recommend [normalize.css](https://github.com/necolas/normalize.css) or [modern-normalize.css](https://github.com/sindresorhus/modern-normalize).
+**Note:** Prose does not bundle a CSS reset. I recommend [normalize.css](https://github.com/necolas/normalize.css) or [modern-normalize.css](https://github.com/sindresorhus/modern-normalize).
 
 ## License
 
