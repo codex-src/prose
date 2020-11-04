@@ -47,6 +47,9 @@
 	}
 	strong {
 		font-weight: 600;
+		& code {
+			font-weight: 500;
+		}
 	}
 	*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) > a {
 		text-decoration: underline;
