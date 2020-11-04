@@ -2,7 +2,7 @@
 	*:not(pre) > code {
 		@include no-macos-retina;
 		padding: em(2) em(4);
-		font: em($fs-small) / $base-lh $mono;
+		font: em($code-fs) / $code-lh $mono;
 		font-weight: inherit;
 		color: $blue-600;
 		background-color: $white;
@@ -16,7 +16,7 @@
 		margin-right: rem(-16);
 		padding: rem(12) rem(16);
 		background-color: $gray-800;
-		font: em($fs-small) / $base-lh $mono;
+		font: em($code-fs) / $code-lh $mono;
 		// font-weight: inherit;
 		color: $white;
 		border-radius: 0;

@@ -61,6 +61,6 @@
 		color: $gray-600;
 	}
 	small {
-		font-size: em(fs-small);
+		font: em($small-fs) / $small-lh $sans;
 	}
 }

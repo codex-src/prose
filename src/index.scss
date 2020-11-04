@@ -6,15 +6,19 @@
 @import "./utils";
 @import "./variables";
 
-$base-fs: 18;
-$base-lh: 1.6;
-
 $head-h1-fs: 28;
 $head-h2-fs: 24;
 $head-h3-fs: 20;
 $head-lh: 1.4;
 
-$fs-small: 13;
+$base-fs: 18;
+$base-lh: 1.6;
+
+$code-fs: 13;
+$code-lh: 1.6;
+
+$small-fs: 13;
+$small-lh: 1.8;
 
 .prose {
 	@include base;
