@@ -1,3 +1,12 @@
+@mixin reset-spacing {
+	& > *:first-child {
+		margin-top: 0 !important;
+	}
+	& > *:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+
 @mixin block-spacing {
 	& > * + * {
 		margin-top: rem($base-fs * $base-lh);
@@ -6,7 +15,10 @@
 
 	& > h1 {
 		margin-top: rem(1.5 * $base-fs * $base-lh);
-		margin-bottom: rem($base-fs * $base-lh);
+		margin-bottom: 0;
+		& + p {
+			margin-top: rem($base-fs * $base-lh);
+		}
 	}
 	& > h2,
 	& > h3,
@@ -15,26 +27,19 @@
 	& > h6 {
 		margin-top: rem(1.5 * $base-fs * $base-lh);
 		margin-bottom: 0;
+		& + p {
+			margin-top: rem($base-fs * $base-lh / 2);
+		}
 	}
 
-	& > * + p {
+	& > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + p {
 		margin-top: rem($base-fs);
-		margin-bottom: 0;
-	}
-}
-
-@mixin reset-spacing {
-	& > *:first-child {
-		margin-top: 0;
-	}
-	& > *:last-child {
-		margin-bottom: 0;
 	}
 }
 
 @mixin base {
-	@include block-spacing;
 	@include reset-spacing;
+	@include block-spacing;
 
 	& > *:not(div) {
 		@include macos-retina;
@@ -51,7 +56,7 @@
 			font-weight: 500;
 		}
 	}
-	*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) > a {
+	*:not(div):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) a {
 		text-decoration: underline;
 		color: $gray-600;
 	}
