@@ -1,9 +1,9 @@
 @mixin code {
 	*:not(pre) > code {
 		@include no-macos-retina;
-
 		padding: em(2) em(4);
-		font: em($fs-small, $round: false) / $base-lh $mono;
+		font: em($fs-small) / $base-lh $mono;
+		font-weight: inherit;
 		color: $blue-600;
 		background-color: $white;
 		border: 1px solid $gray-300;
@@ -12,12 +12,12 @@
 
 	pre {
 		@include no-macos-retina;
-
 		margin-left: rem(-16);
 		margin-right: rem(-16);
 		padding: rem(12) rem(16);
 		background-color: $gray-800;
-		font: em($fs-small, $round: false) / $base-lh $mono;
+		font: em($fs-small) / $base-lh $mono;
+		// font-weight: inherit;
 		color: $white;
 		border-radius: 0;
 		@media (min-width: $sm) {

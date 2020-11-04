@@ -36,9 +36,8 @@
 	@include block-spacing;
 	@include reset-spacing;
 
-	& {
+	& > *:not(div) {
 		@include macos-retina;
-
 		font: rem($base-fs) / $base-lh $sans;
 		color: $gray-800;
 	}
@@ -49,11 +48,11 @@
 	strong {
 		font-weight: 600;
 	}
-	:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) > a {
+	*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) > a {
 		text-decoration: underline;
 		color: $gray-600;
 	}
 	small {
-		font-size: em(fs-small, $round: false);
+		font-size: em(fs-small);
 	}
 }

@@ -2,31 +2,30 @@
 	h1 {
 		font: 600 rem($head-h1-fs) / $head-lh $sans;
 		color: $black;
+		& code {
+			font-weight: 500;
+		}
 	}
 	h2 {
 		font: 600 rem($head-h2-fs) / $head-lh $sans;
 		color: $black;
+		& code {
+			font-weight: 500;
+		}
 	}
-	h3,
 	h3,
 	h4,
 	h5,
 	h6 {
 		font: 600 rem($head-h3-fs) / $head-lh $sans;
 		color: $black;
+		& code {
+			font-weight: 500;
+		}
 	}
 
-	// h1 code,
-	// h4 code,
-	// h3 code,
-	// h4 code,
-	// h5 code,
-	// h6 code {
-	// 	@include macos-retina;
-	// }
-
 	h1 > a:hover,
-	h4 > a:hover,
+	h2 > a:hover,
 	h3 > a:hover,
 	h4 > a:hover,
 	h5 > a:hover,

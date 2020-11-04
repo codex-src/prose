@@ -14,12 +14,9 @@
 // Ex:
 //
 // 16 -> 1em
-@function em($n, $round: true) {
+@function em($n) {
 	@if type-of($n) != "number" {
 		@return $n;
-	}
-	@if ($round) {
-		$n: round($n);
 	}
 	@return $n / 16 + em;
 }
