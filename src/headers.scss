@@ -1,11 +1,11 @@
 @mixin headers {
 	h1 {
 		font: 600 rem($head-h1-fs) / $head-lh $sans;
-		color: var(--black);
+		color: $black;
 	}
 	h2 {
 		font: 600 rem($head-h2-fs) / $head-lh $sans;
-		color: var(--black);
+		color: $black;
 	}
 	h3,
 	h3,
@@ -13,7 +13,7 @@
 	h5,
 	h6 {
 		font: 600 rem($head-h3-fs) / $head-lh $sans;
-		color: var(--black);
+		color: $black;
 	}
 
 	// h1 code,

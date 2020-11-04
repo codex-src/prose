@@ -3,10 +3,10 @@
 		@include no-macos-retina;
 
 		padding: em(2) em(4);
-		font: $fs-small-em / $base-lh $mono;
-		color: var(--blue-600);
-		background-color: var(--white);
-		border: 1px solid var(--gray-300);
+		font: em($fs-small, $round: false) / $base-lh $mono;
+		color: $blue-600;
+		background-color: $white;
+		border: 1px solid $gray-300;
 		border-radius: em(4);
 	}
 
@@ -16,9 +16,9 @@
 		margin-left: rem(-16);
 		margin-right: rem(-16);
 		padding: rem(12) rem(16);
-		background-color: var(--gray-800);
-		font: $fs-small-em / $base-lh $mono;
-		color: var(--white);
+		background-color: $gray-800;
+		font: em($fs-small, $round: false) / $base-lh $mono;
+		color: $white;
 		border-radius: 0;
 		@media (min-width: $sm) {
 			& {
