@@ -1,23 +1,24 @@
 @mixin reset-spacing {
-	& > *:first-child {
-		margin-top: 0;
+	> *:first-child {
+		margin-top: 0 !important;
 	}
-	& > *:last-child {
-		margin-bottom: 0;
+	> *:last-child {
+		margin-bottom: 0 !important;
 	}
 }
 
 @mixin block-spacing {
-	& > * + * {
-		margin-top: rem($base-fs * $base-lh / 2);
+	> * {
+		@include margin-y(rem($base-fs * $base-lh));
 	}
-	> * + h1,
-	> * + h2,
-	> * + h3,
-	> * + h4,
-	> * + h5,
-	> * + h6 {
-		margin-top: rem($base-fs * $base-lh);
+	> h1 + p,
+	> h2 + p,
+	> h3 + p,
+	> h4 + p,
+	> h5 + p,
+	> h6 + p,
+	> p + p {
+		margin-top: rem(-1 * $base-fs * $base-lh / 2);
 	}
 }
 
@@ -25,7 +26,7 @@
 	@include reset-spacing;
 	@include block-spacing;
 
-	& > *:not(div) {
+	> *:not(div) {
 		@include macos-retina;
 		font: rem($base-fs) / $base-lh $sans;
 		color: $gray-800;
@@ -35,12 +36,13 @@
 		font-style: italic;
 	}
 	strong {
-		font-weight: 600;
-		& code {
-			font-weight: 500;
+		$font-weight: 600;
+		font-weight: $font-weight;
+		code {
+			font-weight: $font-weight - 100;
 		}
 	}
-	*:not(div):not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) a {
+	*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(div) a {
 		text-decoration: underline;
 		color: $gray-600;
 	}

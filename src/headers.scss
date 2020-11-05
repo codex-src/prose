@@ -1,35 +1,38 @@
 @mixin headers {
-	h1 {
-		font: 600 rem($head-h1-fs) / $head-lh $sans;
+	> h1 {
+		$font-weight: 600;
+		font: $font-weight rem($head-h1-fs) / $head-lh $sans;
 		color: $black;
-		& code {
-			font-weight: 500;
+		code {
+			font-weight: $font-weight - 100;
 		}
 	}
-	h2 {
-		font: 600 rem($head-h2-fs) / $head-lh $sans;
+	> h2 {
+		$font-weight: 600;
+		font: $font-weight rem($head-h2-fs) / $head-lh $sans;
 		color: $black;
-		& code {
-			font-weight: 500;
+		code {
+			font-weight: $font-weight - 100;
 		}
 	}
-	h3,
-	h4,
-	h5,
-	h6 {
-		font: 600 rem($head-h3-fs) / $head-lh $sans;
+	> h3,
+	> h4,
+	> h5,
+	> h6 {
+		$font-weight: 600;
+		font: $font-weight rem($head-h3-fs) / $head-lh $sans;
 		color: $black;
-		& code {
-			font-weight: 500;
+		code {
+			font-weight: $font-weight - 100;
 		}
 	}
 
-	h1 > a:hover,
-	h2 > a:hover,
-	h3 > a:hover,
-	h4 > a:hover,
-	h5 > a:hover,
-	h6 > a:hover {
+	> h1 > a:hover,
+	> h2 > a:hover,
+	> h3 > a:hover,
+	> h4 > a:hover,
+	> h5 > a:hover,
+	> h6 > a:hover {
 		text-decoration: underline;
 	}
 }

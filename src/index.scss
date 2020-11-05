@@ -20,10 +20,9 @@ $code-lh: 1.6;
 $small-fs: 13;
 $small-lh: 1.8;
 
+/*! @zaydek/prose | MIT License | https://github.com/zaydek/prose */
 .prose {
 	@include base;
-
-	/*! @zaydek/prose | MIT License | https://github.com/zaydek/prose */
 	@include code;
 	@include headers;
 	@include lists;

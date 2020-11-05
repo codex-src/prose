@@ -1,36 +1,36 @@
 @mixin lists {
 	$inset: 24;
 
-	ul {
+	> ul {
 		margin-left: rem($inset);
 	}
-	ul li {
+	> ul > li {
 		margin-top: rem(6);
 		margin-bottom: rem(6);
 	}
-	ul li::before {
+	> ul > li::before {
 		margin-left: rem(-1 * $inset);
 		position: absolute;
 		content: "• ";
 		color: $blue-500;
 	}
 
-	ol {
+	> ol {
 		margin-left: rem($inset);
 	}
-	ol li {
+	> ol > li {
 		margin-top: rem(6);
 		margin-bottom: rem(6);
 	}
-	ol li:first-of-type {
+	> ol > li:first-of-type {
 		counter-reset: count;
 	}
-	ol li::before {
+	> ol > li::before {
 		margin-left: rem(-1 * $inset);
 		position: absolute;
 		content: counter(count) ". ";
-		counter-increment: count; // Etc.
-		font-feature-settings: "tnum"; // Etc.
+		counter-increment: count; // Added property
+		font-feature-settings: "tnum"; // Added property
 		color: $blue-500;
 	}
 }

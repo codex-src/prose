@@ -1,32 +1,36 @@
 @mixin code {
-	// NOTE: Use `em` for `font` -- not `rem`.
-	*:not(pre) > code {
+	> *:not(pre) code {
 		@include no-macos-retina;
 		padding: em(2) em(4);
-		font: em($code-fs) / $code-lh $mono;
+		font: em($code-fs) /* NOTE: Use `em`. */ / $code-lh Monaco, $mono;
 		color: $blue-600;
 		background-color: $white;
 		border: 1px solid $gray-300;
-		border-radius: rem(4);
+		border-radius: rem(3);
+	}
+	> h1 code,
+	> h2 code,
+	> h3 code,
+	> h4 code,
+	> h5 code,
+	> h6 code {
+		@include no-macos-retina;
+		line-height: $head-lh; /* NOTE: Reset to `$head-lh`. */
 	}
 
-	// NOTE: Use `rem` for `font`.
-	pre {
+	> pre {
 		@include no-macos-retina;
-		margin-left: rem(-16);
-		margin-right: rem(-16);
+		@include margin-x(rem(-16));
 		padding: rem(12) rem(16);
-		background-color: $gray-800;
-		font: rem($code-fs + 1) / $code-lh $mono;
+		font: rem($code-fs + 1) / $code-lh Monaco, $mono;
 		color: $white;
-		border-radius: 0;
-		@media (min-width: $sm) {
-			& {
-				margin-left: 0;
-				margin-right: 0;
-				padding: rem(12) rem(24);
-				border-radius: rem(6);
-			}
+		background-color: $gray-800;
+	}
+	@media (min-width: $sm) {
+		> pre {
+			@include margin-x(0); // Reset
+			padding: rem(12) rem(24);
+			border-radius: rem(6);
 		}
 	}
 }
