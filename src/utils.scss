@@ -1,39 +1,33 @@
+@use "sass:math";
+
 // Ex:
 //
 // 16 -> 1rem
-@function rem($n, $round: true) {
+@function rem($n) {
 	@if type-of($n) != "number" {
 		@return $n;
 	}
-	@if ($round) {
-		$n: round($n);
-	}
-	@return $n / 16 + rem;
+	@return math.floor($n) / 16 + rem;
 }
 
 // Ex:
 //
 // 16 -> 1em
-//
-// NOTE: `em` does not use `round`.
 @function em($n) {
 	@if type-of($n) != "number" {
 		@return $n;
 	}
-	@return $n / 16 + em;
+	@return math.floor($n) / 16 + em;
 }
 
 // Ex:
 //
 // 16 -> 16px
-@function px($n, $round: true) {
+@function px($n) {
 	@if type-of($n) != "number" {
 		@return $n;
 	}
-	@if ($round) {
-		$n: round($n);
-	}
-	@return $n + px;
+	@return math.floor($n) + px;
 }
 
 @mixin no-macos-retina {

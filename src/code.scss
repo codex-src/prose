@@ -1,23 +1,23 @@
 @mixin code {
+	// NOTE: Use `em` for `font` -- not `rem`.
 	*:not(pre) > code {
 		@include no-macos-retina;
 		padding: em(2) em(4);
 		font: em($code-fs) / $code-lh $mono;
-		font-weight: inherit;
 		color: $blue-600;
 		background-color: $white;
 		border: 1px solid $gray-300;
 		border-radius: rem(4);
 	}
 
+	// NOTE: Use `rem` for `font`.
 	pre {
 		@include no-macos-retina;
 		margin-left: rem(-16);
 		margin-right: rem(-16);
 		padding: rem(12) rem(16);
 		background-color: $gray-800;
-		font: em($code-fs) / $code-lh $mono;
-		// font-weight: inherit;
+		font: rem($code-fs + 1) / $code-lh $mono;
 		color: $white;
 		border-radius: 0;
 		@media (min-width: $sm) {
