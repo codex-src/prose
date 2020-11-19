@@ -1,3 +1,7 @@
+@use "../my-duomo" as *;
+@use "configuration" as *;
+@use "helpers" as *;
+
 @mixin lists {
 	$inset: 24;
 
@@ -12,7 +16,7 @@
 		margin-left: rem(-1 * $inset);
 		position: absolute;
 		content: "• ";
-		color: $blue-500;
+		color: color(blue-500);
 	}
 
 	> ol {
@@ -31,6 +35,6 @@
 		content: counter(count) ". ";
 		counter-increment: count; // Added property
 		font-feature-settings: "tnum"; // Added property
-		color: $blue-500;
+		color: color(blue-500);
 	}
 }

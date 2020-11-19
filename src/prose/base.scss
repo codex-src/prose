@@ -1,3 +1,7 @@
+@use "../my-duomo" as *;
+@use "configuration" as *;
+@use "helpers" as *;
+
 @mixin reset-spacing {
 	> *:first-child {
 		margin-top: 0 !important;
@@ -28,8 +32,8 @@
 
 	> *:not(div) {
 		@include macos-retina;
-		font: rem($base-fs) / $base-lh $sans;
-		color: $gray-800;
+		font: rem($base-fs) / $base-lh font-family(sans-serif);
+		color: color(gray-800);
 	}
 
 	em {
@@ -44,9 +48,9 @@
 	}
 	*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(div) a {
 		text-decoration: underline;
-		color: $gray-600;
+		color: color(gray-600);
 	}
 	small {
-		font: em($small-fs) / $small-lh $sans;
+		font: rem($small-fs) / $small-lh font-family(sans-serif);
 	}
 }

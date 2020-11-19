@@ -1,7 +1,11 @@
+@use "../my-duomo" as *;
+@use "configuration" as *;
+@use "helpers" as *;
+
 @mixin headers {
 	> h1 {
 		$font-weight: 600;
-		font: $font-weight rem($head-h1-fs) / $head-lh $sans;
+		font: $font-weight rem($head-h1-fs) / $head-lh font-family(sans-serif);
 		color: $black;
 		code {
 			font-weight: $font-weight - 100;
@@ -9,7 +13,7 @@
 	}
 	> h2 {
 		$font-weight: 600;
-		font: $font-weight rem($head-h2-fs) / $head-lh $sans;
+		font: $font-weight rem($head-h2-fs) / $head-lh font-family(sans-serif);
 		color: $black;
 		code {
 			font-weight: $font-weight - 100;
@@ -20,7 +24,7 @@
 	> h5,
 	> h6 {
 		$font-weight: 600;
-		font: $font-weight rem($head-h3-fs) / $head-lh $sans;
+		font: $font-weight rem($head-h3-fs) / $head-lh font-family(sans-serif);
 		color: $black;
 		code {
 			font-weight: $font-weight - 100;

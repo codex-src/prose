@@ -7,13 +7,12 @@
 		"dist/"
 	],
 	"scripts": {
-		"watch-prose": "yarn watch --interval 0.1 'yarn -s sass --no-charset src/index.scss dist/index.css' src",
-		"build-prose": "yarn -s sass --no-charset src/index.scss dist/index.css && yarn -s sass --no-charset -s compressed src/index.scss dist/index.min.css",
-		"build-reset": "yarn -s sass --no-charset src/tailwind-base.scss dist/reset.css && yarn -s sass --no-charset -s compressed src/tailwind-base.scss dist/reset.min.css",
-		"build": "yarn build-prose && yarn build-reset",
+		"watch-prose": "watch --interval 0.1 'yarn --silent sass --no-charset src/index.scss dist/index.css' src",
+		"build": "rm -rf dist && yarn sass --no-charset src/index.scss dist/index.css",
 		"publish-dist-dry-run": "yarn build && npm publish --dry-run"
 	},
 	"devDependencies": {
+		"@zaydek/duomo": "^0.6.12",
 		"prettier": "^2.1.2",
 		"sass": "^1.28.0",
 		"watch": "^1.0.2"

@@ -1,0 +1,28 @@
+@mixin no-macos-retina {
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
+}
+@mixin macos-retina {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin margin-x($v) {
+	margin-left: $v;
+	margin-right: $v;
+}
+
+@mixin margin-y($v) {
+	margin-top: $v;
+	margin-bottom: $v;
+}
+
+@mixin padding-x($v) {
+	padding-left: $v;
+	padding-right: $v;
+}
+
+@mixin padding-y($v) {
+	padding-top: $v;
+	padding-bottom: $v;
+}

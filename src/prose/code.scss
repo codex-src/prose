@@ -1,11 +1,15 @@
+@use "../my-duomo" as *;
+@use "configuration" as *;
+@use "helpers" as *;
+
 @mixin code {
 	> *:not(pre) code {
 		@include no-macos-retina;
 		padding: em(2) em(4);
-		font: em($code-fs) /* NOTE: Use `em`. */ / $code-lh Monaco, $mono;
-		color: $blue-600;
-		background-color: $white;
-		border: 1px solid $gray-300;
+		font: em($code-fs) / $code-lh font-family(monospace);
+		color: color(blue-600);
+		background-color: (white);
+		border: 1px solid color(gray-300);
 		border-radius: rem(3);
 	}
 	> h1 code,
@@ -22,9 +26,9 @@
 		@include no-macos-retina;
 		@include margin-x(rem(-16));
 		padding: rem(12) rem(16);
-		font: rem($code-fs + 1) / $code-lh Monaco, $mono;
-		color: $white;
-		background-color: $gray-800;
+		font: rem($code-fs + 1) / $code-lh font-family(monospace);
+		color: color(white);
+		background-color: color(gray-800);
 	}
 	@media (min-width: $sm) {
 		> pre {

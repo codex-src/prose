@@ -1,0 +1,12 @@
+@use "base" as *;
+@use "code" as *;
+@use "headers" as *;
+@use "lists" as *;
+
+/*! @zaydek/prose | MIT License | https://github.com/zaydek/prose */
+.prose {
+	@include base;
+	@include code; // Merge to `base`?
+	@include headers;
+	@include lists;
+}
