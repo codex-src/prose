@@ -1,4 +1,3 @@
-@use "../my-duomo" as *;
 @use "configuration" as *;
 @use "helpers" as *;
 
@@ -9,12 +8,13 @@
 		margin-left: rem($inset);
 	}
 	> ul > li {
-		margin-top: rem(6);
-		margin-bottom: rem(6);
+		$m: rem(6);
+		margin-top: $m;
+		margin-bottom: $m;
 	}
 	> ul > li::before {
-		margin-left: rem(-1 * $inset);
 		position: absolute;
+		margin-left: rem(-1 * $inset);
 		content: "• ";
 		color: color(blue-500);
 	}
@@ -23,15 +23,16 @@
 		margin-left: rem($inset);
 	}
 	> ol > li {
-		margin-top: rem(6);
-		margin-bottom: rem(6);
+		$m: rem(6);
+		margin-top: $m;
+		margin-bottom: $m;
 	}
 	> ol > li:first-of-type {
 		counter-reset: count;
 	}
 	> ol > li::before {
-		margin-left: rem(-1 * $inset);
 		position: absolute;
+		margin-left: rem(-1 * $inset);
 		content: counter(count) ". ";
 		counter-increment: count; // Added property
 		font-feature-settings: "tnum"; // Added property

@@ -1,0 +1,29 @@
+@use "configuration" as *;
+@use "helpers" as *;
+
+@mixin base {
+	> *:not(div) {
+		@include vendored-font-smoothing-on;
+		font: rem($fs) / $lh font-family(sans-serif);
+		color: color(gray-800);
+	}
+
+	em {
+		font-style: italic;
+	}
+	strong {
+		$fw: 600;
+		font-weight: $fw;
+
+		// prettier-ignore
+		code { font-weight: $fw - 100; }
+	}
+	// TODO: Change to `p`, `blockquote`, `ul`, `ol`, etc.?
+	*:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(div) a {
+		text-decoration: underline;
+		color: color(gray-600);
+	}
+	small {
+		font: rem($small-fs) / $small-lh font-family(sans-serif);
+	}
+}

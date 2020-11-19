@@ -1,0 +1,28 @@
+@use "configuration" as *;
+@use "helpers" as *;
+
+@mixin block-spacing {
+	> * {
+		$m: rem($fs * $lh);
+		margin-top: $m;
+		margin-bottom: $m;
+	}
+
+	> *:first-child {
+		margin-top: 0 !important;
+	}
+	> *:last-child {
+		margin-bottom: 0 !important;
+	}
+
+	// prettier-ignore
+	> h1 + p,
+	> h2 + p,
+	> h3 + p,
+	> h4 + p,
+	> h5 + p,
+	> h6 + p,
+	> p  + p {
+		margin-top: rem(-1 * $fs * $lh / 2);
+	}
+}

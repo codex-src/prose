@@ -1,0 +1,41 @@
+@use "configuration" as *;
+@use "helpers" as *;
+
+@mixin headers {
+	> h1 {
+		$fw: 600;
+		font: $fw rem($h1-fs) / $header-lh font-family(sans-serif);
+		color: color(black);
+
+		// prettier-ignore
+		code { font-weight: $fw - 100; }
+	}
+	> h2 {
+		$fw: 600;
+		font: $fw rem($h2-fs) / $header-lh font-family(sans-serif);
+		color: color(black);
+
+		// prettier-ignore
+		code { font-weight: $fw - 100; }
+	}
+	> h3,
+	> h4,
+	> h5,
+	> h6 {
+		$fw: 600;
+		font: $fw rem($h2-fs) / $header-lh font-family(sans-serif);
+		color: color(black);
+
+		// prettier-ignore
+		code { font-weight: $fw - 100; }
+	}
+
+	> h1 > a:hover,
+	> h2 > a:hover,
+	> h3 > a:hover,
+	> h4 > a:hover,
+	> h5 > a:hover,
+	> h6 > a:hover {
+		text-decoration: underline;
+	}
+}

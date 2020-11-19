@@ -1,0 +1,9 @@
+@mixin vendored-font-smoothing-off {
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
+}
+
+@mixin vendored-font-smoothing-on {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

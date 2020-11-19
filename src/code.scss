@@ -1,0 +1,44 @@
+@use "configuration" as *;
+@use "helpers" as *;
+
+@mixin code {
+	> *:not(pre) code {
+		@include vendored-font-smoothing-off;
+		padding: em(2) em(4);
+		font: em($code-fs) / $lh font-family(monospace);
+		color: color(blue-600);
+		background-color: (white);
+		border: 1px solid color(gray-300);
+		border-radius: rem(3);
+	}
+	> h1 code,
+	> h2 code,
+	> h3 code,
+	> h4 code,
+	> h5 code,
+	> h6 code {
+		@include vendored-font-smoothing-off;
+		line-height: $header-lh; // Reset
+	}
+
+	> pre {
+		@include vendored-font-smoothing-off;
+
+		$m: rem(-16);
+		margin-left: $m;
+		margin-right: $m;
+		padding: rem(12) rem(16);
+		font: em($code-fs + 1) / $code-lh font-family(monospace);
+		color: color(white);
+		background-color: color(gray-800);
+	}
+	@media (min-width: px($sm)) {
+		> pre {
+			$m: 0; // Reset
+			margin-left: $m; // Reset
+			margin-right: $m; // Reset
+			padding: rem(12) rem(24); // Reset
+			border-radius: rem(6); // Added
+		}
+	}
+}

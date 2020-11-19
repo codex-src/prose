@@ -1,12 +1,14 @@
 @use "base" as *;
+@use "block-spacing" as *;
 @use "code" as *;
 @use "headers" as *;
 @use "lists" as *;
 
 /*! @zaydek/prose | MIT License | https://github.com/zaydek/prose */
 .prose {
+	@include block-spacing;
 	@include base;
-	@include code; // Merge to `base`?
+	@include code;
 	@include headers;
 	@include lists;
 }
