@@ -1,0 +1,5 @@
+@use "configuration" as *;
+
+@at-root {
+	@include reset;
+}

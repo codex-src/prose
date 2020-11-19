@@ -3,9 +3,9 @@
 
 
 "@zaydek/duomo@^0.6.12":
-  version "0.6.12"
-  resolved "https://registry.yarnpkg.com/@zaydek/duomo/-/duomo-0.6.12.tgz#aaafdda432152299a368215bec4dbe5a3d2ffa33"
-  integrity sha512-65jHqSuMseUrch7wzsgBYE/6TFHvmc+vOgI8+wxsNUSWQGP8tQ9wS6kWeD3Wz7jbL1TZPsElxrXxiQbQal1Ucw==
+  version "0.6.14"
+  resolved "https://registry.yarnpkg.com/@zaydek/duomo/-/duomo-0.6.14.tgz#c650b431b64089d10c706d2f16b263df0959830b"
+  integrity sha512-OkxLzZw/IWqB4VECN0sCVWcYyKGwjam2sfEgYv/p42999Iw5jWaHPVOPVLyOcizbsd+e66cPHNt93nYV3Idg2A==
 
 anymatch@~3.1.1:
   version "3.1.1"

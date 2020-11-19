@@ -7,8 +7,10 @@
 		"dist/"
 	],
 	"scripts": {
-		"watch-prose": "yarn watch --interval 0.1 'yarn --silent sass --load-path node_modules/@zaydek/duomo --no-charset src/index.scss dist/index.css' src",
-		"build": "rm -rf dist && yarn sass --load-path node_modules/@zaydek/duomo --no-charset src/index.scss dist/index.css",
+		"watch-prose": "yarn watch --interval 0.1 'yarn -s sass --load-path node_modules/@zaydek/duomo --no-charset src/index.scss dist/index.css' src",
+		"build-prose": "yarn sass --load-path node_modules/@zaydek/duomo --no-charset src/index.scss dist/index.css",
+		"build-reset": "yarn sass --load-path node_modules/@zaydek/duomo --no-charset src/standalone-reset.scss dist/reset.css",
+		"build": "rm -rf dist && yarn build-prose && yarn build-reset",
 		"publish-dist-dry-run": "yarn build && npm publish --dry-run"
 	},
 	"devDependencies": {
