@@ -1,0 +1,5 @@
+@use "configuration" as duomo;
+
+@at-root {
+	@include duomo.reset;
+}

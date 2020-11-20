@@ -1,5 +1,6 @@
 @use "configuration" as *;
 @use "helpers" as *;
+@use "variables" as *;
 
 @mixin block-spacing {
 	> * {

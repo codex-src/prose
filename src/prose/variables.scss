@@ -1,0 +1,16 @@
+@use "configuration" as *;
+
+$h1-fs: 28 !default;
+$h2-fs: 24 !default;
+$h3-fs: 20 !default;
+$header-lh: 1.4 !default;
+
+$fs: 18 !default;
+$lh: 1.6 !default;
+
+$code-fs: 13 !default;
+$code-lh: 1.6; // Same as `$lh`.
+$code-breakpoint: $sm !default;
+
+$small-fs: 13 !default;
+$small-lh: 1.8 !default;
